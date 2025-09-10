@@ -1,3 +1,4 @@
+// - - - next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -5,6 +6,14 @@ const nextConfig: NextConfig = {
   devIndicators: {
     buildActivity: false,
     position: "bottom-right",
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+    ],
   },
 };
 

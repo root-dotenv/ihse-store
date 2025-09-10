@@ -171,7 +171,6 @@ export default function NavigationBar() {
 }
 
 // Helper components (NavLink, MobileNavLink) remain the same
-// ...
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
