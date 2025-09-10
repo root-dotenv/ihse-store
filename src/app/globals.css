@@ -1,7 +1,12 @@
+/* src/app/globals.css  */
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

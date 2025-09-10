@@ -1,0 +1,1 @@
+# isAvailable product property
