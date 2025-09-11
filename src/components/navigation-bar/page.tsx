@@ -1,31 +1,40 @@
 // src/components/navigation-bar/page.tsx
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, User, ShoppingCart } from "lucide-react";
+import { Search, User, ShoppingCart, ChevronDown } from "lucide-react";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
+import navLinksData from "@/data/navigation-items.json";
 
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement>(null);
 
-  const navLinks = [
-    { href: "/catalogue", text: "Catalogue" },
-    { href: "/upgrades", text: "Upgrades" },
-    { href: "/gadgets", text: "Gadgets" },
-    { href: "/ergo-chairs", text: "Ergo Chairs" },
-    {
-      href: "/photography-video-equipments",
-      text: "Photography/Video Equipments",
-    },
-    { href: "/monitors", text: "Monitors" },
-    { href: "/gaming", text: "Gaming" },
-    { href: "/contact", text: "Contact" },
-  ];
+  // Split navigation links for desktop view (now 7 items)
+  const mainNavLinks = navLinksData.slice(0, 7);
+  const moreNavLinks = navLinksData.slice(7);
+
+  // Close "More" menu when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        moreMenuRef.current &&
+        !moreMenuRef.current.contains(event.target as Node)
+      ) {
+        setIsMoreMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [moreMenuRef]);
 
   const menuVariants = {
     hidden: { x: "-100%" },
@@ -33,13 +42,18 @@ export default function NavigationBar() {
     exit: { x: "-100%", transition: { duration: 0.3, ease: "easeInOut" } },
   };
 
+  const moreMenuVariants = {
+    hidden: { opacity: 0, scale: 0.95, y: -10 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.2 } },
+    exit: { opacity: 0, scale: 0.95, y: -10, transition: { duration: 0.2 } },
+  };
+
   return (
     <header>
       <nav className="bg-[#f5f5f5] h-16 shadow-md flex items-center">
-        <div className="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-8 max-w-[1300px]">
+        <div className="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-8 max-w-[1380px]">
           {/* Mobile View Container */}
           <div className="w-full flex justify-between items-center lg:hidden">
-            {/* Left: Mobile Menu Button */}
             <div className="w-1/3 flex justify-start">
               <button
                 onClick={() => setIsMenuOpen(true)}
@@ -48,7 +62,6 @@ export default function NavigationBar() {
                 <LuMenu size={28} />
               </button>
             </div>
-            {/* Center: Logo */}
             <div className="w-1/3 flex justify-center">
               <Link
                 href="/"
@@ -57,7 +70,6 @@ export default function NavigationBar() {
                 StoreMax+
               </Link>
             </div>
-            {/* Right: Mobile Icons */}
             <div className="w-1/3 flex justify-end">
               <button className="relative text-gray-700 hover:text-black">
                 <ShoppingCart size={24} />
@@ -70,21 +82,57 @@ export default function NavigationBar() {
 
           {/* Desktop View Container */}
           <div className="w-full hidden lg:flex justify-between items-center">
-            {/* Logo */}
             <Link
               href="/"
               className="flex items-center text-black text-[1.75rem] font-bold"
             >
               StoreMax+
             </Link>
-            {/* Desktop Navigation & Icons */}
             <div className="flex items-center">
-              <div className="flex items-center space-x-6 font-medium">
-                {navLinks.map((link) => (
-                  <NavLink key={link.href} href={link.href}>
-                    {link.text}
+              <div className="flex items-center gap-x-4 font-medium">
+                {mainNavLinks.map((link) => (
+                  <NavLink key={link.name} href={link.path}>
+                    {link.name}
                   </NavLink>
                 ))}
+                <div className="relative" ref={moreMenuRef}>
+                  <button
+                    onClick={() => setIsMoreMenuOpen(!isMoreMenuOpen)}
+                    className="flex items-center font-semibold text-[0.9375rem] text-[#1a1c1d] hover:text-[#E4C100] transition-colors"
+                  >
+                    More
+                    <ChevronDown
+                      size={18}
+                      className={`ml-1 transition-transform ${
+                        isMoreMenuOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {isMoreMenuOpen && (
+                      <motion.div
+                        variants={moreMenuVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="absolute top-full right-0 mt-4 w-56 bg-[#FFF] rounded-2xl shadow-lg z-30"
+                      >
+                        <div className="p-3">
+                          {moreNavLinks.map((link) => (
+                            <Link
+                              key={link.name}
+                              href={link.path}
+                              onClick={() => setIsMoreMenuOpen(false)}
+                              className="block text-left text-gray-700 px-4 py-2 text-sm rounded-md hover:bg-gray-100"
+                            >
+                              {link.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
               <div className="flex items-center space-x-6 pl-6 ml-6 border-l border-gray-300">
                 <button className="text-gray-700 hover:text-black">
@@ -105,7 +153,7 @@ export default function NavigationBar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay (No changes needed here) */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -115,7 +163,6 @@ export default function NavigationBar() {
             animate="visible"
             exit="exit"
           >
-            {/* ... rest of the mobile menu overlay code remains the same */}
             <div className="flex justify-between items-center p-4 border-b">
               <button
                 onClick={() => setIsMenuOpen(false)}
@@ -139,13 +186,13 @@ export default function NavigationBar() {
               </div>
             </div>
             <div className="flex flex-col p-4">
-              {navLinks.map((link) => (
+              {navLinksData.map((link) => (
                 <MobileNavLink
-                  key={link.href}
-                  href={link.href}
+                  key={link.name}
+                  href={link.path}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.text}
+                  {link.name}
                 </MobileNavLink>
               ))}
             </div>
@@ -170,7 +217,7 @@ export default function NavigationBar() {
   );
 }
 
-// Helper components (NavLink, MobileNavLink) remain the same
+// Helper component for Desktop navigation links
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
@@ -191,6 +238,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
   );
 };
 
+// Helper component for Mobile navigation links
 interface MobileNavLinkProps extends NavLinkProps {
   onClick: () => void;
 }

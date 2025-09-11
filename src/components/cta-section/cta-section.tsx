@@ -14,7 +14,7 @@ export default function CtaSection() {
           buttonText="Shop Now"
           href="/ergo-chairs"
         />
-        <ImageCard imageUrl="/ergonomic-chair.webp" altText="Ergonomic Chair" />
+        <ImageCard imageUrl="/electric-scooter.png" altText="Ergonomic Chair" />
       </div>
     </section>
   );

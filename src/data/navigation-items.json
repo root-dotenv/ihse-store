@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Electronics",
+    "path": "/electronics"
+  },
+  {
+    "name": "Computers",
+    "path": "/computers"
+  },
+  {
+    "name": "Home Appliances",
+    "path": "/home-appliances"
+  },
+  {
+    "name": "Beauty & Personal Care",
+    "path": "/beauty-personal-care"
+  },
+  {
+    "name": "Gagets",
+    "path": "/gagets"
+  },
+  {
+    "name": "Office Electronics",
+    "path": "/office-electronics"
+  },
+  {
+    "name": "Video Games",
+    "path": "/video-games"
+  },
+  {
+    "name": "Automotive",
+    "path": "/automotive"
+  },
+  {
+    "name": "Sports & Outdoors",
+    "path": "/sports-outdoors"
+  },
+  {
+    "name": "Today's Deals",
+    "path": "/deals"
+  },
+  {
+    "name": "Offers",
+    "path": "/offers"
+  }
+]
