@@ -6,6 +6,7 @@ import NavigationBar from "@/components/navigation-bar/page";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Footer from "@/components/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,7 +70,9 @@ export default function RootLayout({
 
         <main>{children}</main>
         {/* - - - Footer Section - common to all pages & routes */}
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 // src/app/page.tsx
 "use client";
+import CtaSection from "@/components/cta-section/cta-section";
 import FeaturedProducts from "@/components/featured-products/featured-products";
 import HeroSection from "@/components/hero-section/hero-section";
 import PartnersSection from "@/components/other-partners/partners-section";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <FeaturedProducts />
       <UpgradesSection />
       <PartnersSection />
+      <CtaSection />
     </div>
   );
 }
