@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "image": "/ergonomic-chair.webp",
+    "productName": "Electric Ergonomic Desk",
+    "productPrice": "750,000.00 TZS",
+    "productColors": ["White", "Black", "Oak"],
+    "availableInStock": 15,
+    "productDescription": "Heavy Duty Steel Frame, perfect for home and office.",
+    "productCategories": ["Furniture", "Office"],
+    "productTags": ["Ergonomic", "Desk"],
+    "isAvailable": true,
+    "detailedImages": [
+      "/ergonomic-chair.webp",
+      "/airpurifier.webp",
+      "/airpods.webp",
+      "/34inchesback.webp"
+    ],
+    "overviewPoints": [
+      "Smooth, quiet, and quick height adjustment.",
+      "Spacious work surface for multiple monitors.",
+      "4 programmable memory presets for one-touch adjustments.",
+      "Sturdy steel frame for maximum stability."
+    ],
+    "keyDetailsPoints": [
+      "Height Range: 28\" - 47.6\"",
+      "Weight Capacity: 220 lbs",
+      "Material: Laminated Particleboard, Steel"
+    ]
+  },
+  {
+    "id": 2,
+    "image": "/ergonomic-chair-ii.webp",
+    "productName": "Sihoo M59AS Ergonomic Chair",
+    "productPrice": "850,000.00 TZS",
+    "productColors": ["Black", "Gray"],
+    "availableInStock": 8,
+    "productDescription": "Heavy Duty Steel Frame, perfect for home and office.",
+    "productCategories": ["Furniture", "Office"],
+    "productTags": ["Ergonomic", "Desk"],
+    "isAvailable": true,
+    "detailedImages": [
+      "/ergonomic-chair.webp",
+      "/airpurifier.webp",
+      "/airpods.webp",
+      "/34inchesback.webp"
+    ],
+    "overviewPoints": [
+      "Smooth, quiet, and quick height adjustment.",
+      "Spacious work surface for multiple monitors.",
+      "4 programmable memory presets for one-touch adjustments.",
+      "Sturdy steel frame for maximum stability."
+    ],
+    "keyDetailsPoints": [
+      "Height Range: 28\" - 47.6\"",
+      "Weight Capacity: 220 lbs",
+      "Material: Laminated Particleboard, Steel"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/pegboard-ii.webp",
+    "productName": "IKEA Skadis Pegboard with Accessories, Black",
+    "productPrice": "250,000.00 TZS",
+    "productColors": ["Black", "White"],
+    "availableInStock": 3,
+    "productDescription": "Heavy Duty Steel Frame, perfect for home and office.",
+    "productCategories": ["Furniture", "Office"],
+    "productTags": ["Ergonomic", "Desk"],
+    "isAvailable": true,
+    "detailedImages": [
+      "/ergonomic-chair.webp",
+      "/airpurifier.webp",
+      "/airpods.webp",
+      "/34inchesback.webp"
+    ],
+    "overviewPoints": [
+      "Smooth, quiet, and quick height adjustment.",
+      "Spacious work surface for multiple monitors.",
+      "4 programmable memory presets for one-touch adjustments.",
+      "Sturdy steel frame for maximum stability."
+    ],
+    "keyDetailsPoints": [
+      "Height Range: 28\" - 47.6\"",
+      "Weight Capacity: 220 lbs",
+      "Material: Laminated Particleboard, Steel"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/mechanical-keyboard.webp",
+    "productName": "Green Lion Air Cooler with Air Purification",
+    "productPrice": "750,000.00 TZS",
+    "productColors": ["White"],
+    "availableInStock": 2,
+    "productDescription": "Heavy Duty Steel Frame, perfect for home and office.",
+    "productCategories": ["Furniture", "Office"],
+    "productTags": ["Ergonomic", "Desk"],
+    "isAvailable": true,
+    "detailedImages": [
+      "/ergonomic-chair.webp",
+      "/airpurifier.webp",
+      "/airpods.webp",
+      "/34inchesback.webp"
+    ],
+    "overviewPoints": [
+      "Smooth, quiet, and quick height adjustment.",
+      "Spacious work surface for multiple monitors.",
+      "4 programmable memory presets for one-touch adjustments.",
+      "Sturdy steel frame for maximum stability."
+    ],
+    "keyDetailsPoints": [
+      "Height Range: 28\" - 47.6\"",
+      "Weight Capacity: 220 lbs",
+      "Material: Laminated Particleboard, Steel"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/shure-image.webp",
+    "productName": "Powerology Smart Robovac Vacuum & Mop - Black",
+    "productPrice": "515,000.00 TZS",
+    "productColors": ["Black"],
+    "availableInStock": 5,
+    "productDescription": "Heavy Duty Steel Frame, perfect for home and office.",
+    "productCategories": ["Furniture", "Office"],
+    "productTags": ["Ergonomic", "Desk"],
+    "isAvailable": true,
+    "detailedImages": [
+      "/ergonomic-chair.webp",
+      "/airpurifier.webp",
+      "/airpods.webp",
+      "/34inchesback.webp"
+    ],
+    "overviewPoints": [
+      "Smooth, quiet, and quick height adjustment.",
+      "Spacious work surface for multiple monitors.",
+      "4 programmable memory presets for one-touch adjustments.",
+      "Sturdy steel frame for maximum stability."
+    ],
+    "keyDetailsPoints": [
+      "Height Range: 28\" - 47.6\"",
+      "Weight Capacity: 220 lbs",
+      "Material: Laminated Particleboard, Steel"
+    ]
+  },
+  {
+    "id": 6,
+    "image": "/legion-monitor.webp",
+    "productName": "Lenovo Legion R27q-30 Gaming Monitor, 180hz",
+    "productPrice": "1,100,000.00 TZS",
+    "productColors": ["Black"],
+    "availableInStock": 5,
+    "productDescription": "Heavy Duty Steel Frame, perfect for home and office.",
+    "productCategories": ["Furniture", "Office"],
+    "productTags": ["Ergonomic", "Desk"],
+    "isAvailable": true,
+    "detailedImages": [
+      "/ergonomic-chair.webp",
+      "/airpurifier.webp",
+      "/airpods.webp",
+      "/34inchesback.webp"
+    ],
+    "overviewPoints": [
+      "All your games look breathtakingly sharp on the expansive 27-inch monitor with its QHD resolution.",
+      "Super-fast 180Hz (Overclock from 165Hz) refresh rate makes all your games run super smooth on the Legion R27q-30.",
+      "Get every shot spot on with super responsive 0.5ms MPRT response times.",
+      "Motion blur and stuttering in gameplay are things of the past with AMD FreeSync™ Premium and the ClearMR 7000 certification.",
+      "The DisplayHDR400 provides a realistic gaming image."
+    ],
+    "keyDetailsPoints": [
+      "Height Range: 28\" - 47.6\"",
+      "QHD 27'' In-Plane Switching Display with 99% aRGB",
+      "180Hz Overclock Refresh Rate with 0.5ms Response Time"
+    ]
+  }
+]

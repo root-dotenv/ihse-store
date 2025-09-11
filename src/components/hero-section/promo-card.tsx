@@ -19,7 +19,7 @@ export default function PromoCard({
   imageUrl,
 }: PromoCardProps) {
   return (
-    <div className="bg-[#FFF] flex items-center justify-between rounded-2xl shadow-[0_4px_6px_0_rgba(0,0,0,0.08)] p-2.5">
+    <div className="bg-[#FFF] flex items-center justify-between rounded-2xl shadow-[0_4px_6px_0_rgba(0,0,0,0.08)] px-2.5 py-1.5">
       <div className="p-4 flex flex-col h-full">
         <h3
           className="text-[#303c43] text-[18px] font-bold leading-[26px] tracking-[-0.36px] mb-2.5"
